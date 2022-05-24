@@ -1,0 +1,41 @@
+variable age=Lire saisie clavier
+variable credit=Lire saisie clavier
+
+
+constanteBN=5
+constanteBA=8
+constanteP=20 
+
+
+
+if choix == p{
+
+	if {var credit > var menu =>merci pour votre commande ,var credit=credit-p
+
+	 Else{ Prenez un menu moins chere}
+
+
+if choix =BA {var credit > var menu and si{age>18}=> merci pour votre commande 
+
+	Else if{ var credit > var menu and si{age<18} changer de boisson}
+	else{prenez un menu moins chere}
+ 
+
+if choix== BN 
+
+if {var credit > var menu =>merci pour votre commande 
+
+	 Else if{ commande impossible}
+
+
+
+
+if {var credit < var menu => 
+
+	afficher changer pour un menu -chere (ou afficher menus possible credit>menu )
+
+ Else if{
+
+(menu==menu alcoolise) and (si{age<18}=> changer de boisson svp 
+
+sinon{merci pour votre commande}

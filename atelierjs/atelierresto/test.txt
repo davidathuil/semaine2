@@ -1,0 +1,89 @@
+// Création variable / constante
+CONSTANTE plat = 20;
+CONSTANTE BA = 8;
+CONSTANTE boissonNonAlcoolisee = 5;
+
+VARIABLE age = LIRE_SAISIE_CLAVIER
+VARIABLE credit=LIRE_SAISIE_CLAVIER
+VARIABLE choix = LIRE_SAISIE_CLAVIER
+
+FONCTION possiblechoix (credit) {
+SI credit >= 20 {
+RETOURNER choix ="Vous pouvez commander Boisson alcoolise ou la boisson non alcoolise ou le plat"
+}
+Sinon SI credit>=8&& SI credit<20 {
+RETOURNER choix ="Vous pouvez commander Boisson alcoolise ou la boisson non alcoolise"
+}
+Sinon SI credit>=5 && SI credit<8{
+RETOURNER choix ="Vous pouvez commander la boisson non alcoolise"
+}
+Sinon SI credit<5 {
+RETOURNER choix ="Vous ne pouvez pas commander"
+
+
+
+// Demande de l'âge au client
+
+age = "Quel âge avez vous ?" (19)
+
+// Demande du crédit au client
+
+credit = "Combien avez-vous dans votre portefeuille ?" (40)
+
+// Demande du choix au client
+
+TANT QUE credit > 5 && choix =!4 effectuer {
+choix = "Que voulez vous commander : 1/Plat 2/ Boisson Alcoolisée 3/ Boisson Non Alcoolisé 4/fin"
+
+// CONDITIONS SI CHOIX = PLAT
+
+//appel fonction
+AFFICHER possiblechoix (credit)
+
+// boucle choix multiple
+
+SI choix == "1" {
+
+    // Vérification du crédit
+    SI credit >= plat {
+        credit = credit - plat
+        AFFICHER "Commande accepté voici votre plat il vous reste " + credit + " euros "
+    } 
+    SINON {
+        AFFICHER "Vous n'avez pas assez d'argent commandez autre chose".
+
+    }
+
+
+
+} 
+// Choix boisson alcool
+SINON SI choix == "2" {
+    SI age < 18 {
+        AFFICHER "Vous n'êtes pas majeur vous ne pouvez pas commander d'alcool"
+    }
+    SINON SI credit < BA {
+        
+        AFFICHER "Vas au travail pour gagner plus d'argent !"
+
+    }
+    SINON {
+        credit = credit - BA
+        AFFICHER "A la tienne il vous reste " + credit + " euros "
+    }
+}
+// Partie boisson non alcoolisée
+SINON SI choix == "3" {
+    // Vérifier le crédit du client
+    SI credit >= boissonNonAlcoolisee {
+        credit = credit - boissonNonAlcoolisee
+        AFFICHER "Commande accepté voici votre soda il vous reste " + credit + " euros "
+    } SINON {
+        AFFICHER "Vous n'avez pas assez d'argent commandez autre chose".
+
+    }
+} 
+// Tout les autres cas
+SINON {
+    AFFICHER "Je n'ai pas compris veuillez réessayer"
+}

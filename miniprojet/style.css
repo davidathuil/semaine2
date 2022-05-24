@@ -1,0 +1,315 @@
+.logo{
+  width: 20%;
+  flex-grow: 3;
+  
+}
+.logo img {
+  width: 50%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+   }
+.ENTETE{
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 2;
+ 
+
+}
+.ENTETE img{
+  width: 100%;
+
+}
+.ENTETE a{
+  color: #444444;
+  text-decoration:none;
+  align-self: center;
+  font-family: 'Roboto';
+  font-size: 3vh;
+  font-size:2vw;
+}
+.Navi{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 10vh
+}
+
+
+
+.DesBT:before, .SeulT:after ,.LesonT::after, .GuitaresS::after{ content:''; display:inline-block; vertical-align: middle; width: 10rem; height: 2px; background:#B14949 }
+p:before { margin-right: 2rem }
+p:after { margin-left: .5rem }
+.barreguitare:before{ content:''; display:inline-block; vertical-align: middle; width: 10rem; height: 2px; background:white}
+
+.Page{
+  width: 100%;
+  height: 100%;
+}
+.Page1{
+  position: absolute;
+  bottom: 25%;
+  right: 25%;
+}
+.Page1 p{
+  color: white;
+  font-size: xx-large;
+  font-family: 'Roboto';
+
+}
+.bgImage{background-image: url(./Miniprojet/images/bakground.jpg);
+        
+        background-position: center;
+        border-top: solid 5px #B14949;
+        background-size: cover;
+        height: 100vh;
+        width: 100vw; 
+        /* position: absolute; */
+
+
+}
+
+.page2{
+    display: grid;
+    /* height: 100vh; */
+
+    grid-template-columns: 0.5fr repeat(9, 1fr) 0.5fr;
+    /* grid-template-rows: repeat(6, 1fr); */
+    grid-gap:20px;
+    grid-template-areas:
+    "hd hd hd hd hd   hd   hd   hd   hd   hd hd"
+    ".t1 t1 t1 t1 t1 Ig Ig Id Id ."
+    /* ".t1 t1 t1 t1 t1 Ig Ig Id Id ." */
+    ".t2 t2 t2 t2 t2 Ig Ig Id Id ."
+    /* ".t2 t2 t2 t2 t2 Ig Ig Id Id ." */
+    ".t3 t3 t3 t3 t3 Ib Ib Ib Ib .";
+    
+}
+img {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+     }
+   
+/* .BlocImg{
+
+    display: grid}; */
+
+
+  .lESPRIT {
+    grid-area: hd;
+    display: grid;
+    background-color: #B14949;
+  }
+  .Seul {
+    grid-area: t1;
+    /* grid-area: 2 / 1 / 4 / 5; */
+  }
+  .DesB {
+    grid-area: t2;
+    display: grid;
+  }
+  .Leson {
+    grid-area: t3;
+    display: grid;
+    align-self: start;
+  } 
+  .Colg {
+    grid-area: Ig;
+    display: grid;
+    object-fit: fill;
+  }
+  .Cold {
+    grid-area: Id;
+    display: grid;
+    object-fit: fill;
+  }
+  .Colb {
+    grid-area: Ib;
+    display: grid;
+    object-fit: fill;
+  }
+
+  .NGrattes{
+    grid-area: NG;
+    display: grid;
+    background-color: #B14949;
+  }
+	.GuitaresS{
+    grid-area: gS;
+    font-size: la ;
+  }
+  .GuitareT{
+    grid-area: gT;
+  }
+  .page3{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 0.5fr repeat(9, 1fr) 0.5fr;
+    grid-template-rows: 1fr 0.5fr repeat(5, 1fr);
+    grid-template-areas:
+    ". NG NG NG NG NG NG NG NG NG ."
+  
+    ". . . . gS gS gS . . . . "
+    ". . . . gT gT gT . . . . "
+    ". . . . gT gT gT . . . . "
+    ". . g1 g1 g2 g2 g3 g3 g4 g4 ."
+    ". . g1 g1 g2 g2 g3 g3 g4 g4 .";
+    
+}
+
+.page3 [type="button"] {background-color:#B14949 ;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: white;
+  display: block;
+  margin:auto ;
+  border-radius: 10px;
+}
+
+.page3 h5{
+  text-align: center;
+}
+
+.G1{
+  grid-area: g1;
+  height: 100%;
+  justify-self:start;
+}
+.G2{
+  grid-area: g2;
+  height: 100%;
+  justify-self:start;
+}
+.G3{
+  grid-area: g3;
+  height: 100%;
+  justify-self:start;
+}
+.G4{
+  grid-area: g4;
+  height: 100%;
+  justify-self:start;
+}
+.page3 img {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+   }
+  
+   figcaption {
+    text-align:center;
+    align-items:stretch;
+   }
+   .formulaire{
+     
+     /* text-align: center; */
+     vertical-align: middle;
+     margin-top: 10%;
+   }
+     
+     /* .formulaire{
+     display:grid;
+     grid-template-columns: 1fr 1fr;
+     grid-template-areas:
+     " n ."
+      "e t "
+     "m m "
+     "m m ";
+     
+   } */
+   .formulaire input {
+    border-color:#B14949;
+   }
+.formulaire textarea{
+  width: 100%;
+}
+.page4{
+  margin-top: 5%;
+}
+   .CONTACTE{
+     background-color: #B14949;
+     color: white;
+     height: 8vh;
+   }
+   /* .formulaire [type="text"]{
+     grid-area: n;
+   }
+
+   .formulaire [type="email"]{
+    grid-area: e;
+  }
+
+  .formulaire [type="tel"]{
+    grid-area: t;
+  }
+.formulaire .message{
+  grid-area: m;
+
+} */
+
+
+
+
+.nom{
+  grid-area: n;
+  width: 100%;
+  height: 100%;
+}
+.mail{
+grid-area: e;
+}
+.message{
+grid-area: m;
+}
+.telephone{
+grid-area: t;
+}
+
+.formulaire{
+  display: grid;
+  margin: auto;
+width: 50%;
+column-gap: 200px;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: 
+        "n . "
+        "e t "
+        "m m ";
+        
+}
+.name{
+text-align: center;
+}
+input{
+  width: 100%;
+}
+label{
+  display: block;
+  padding-left: 5px;
+}
+textarea{
+  resize: none;
+}
+
+  @media (max-width: 500px) {
+    .page2{
+      display: grid;
+      height: 100%;
+  
+      grid-template-columns: 0.5fr repeat(5, 1fr) 0.5fr;
+      grid-template-rows: repeat(1, 1fr);
+      grid-template-areas:
+      "hd hd hd hd hd hd hd "
+      ".t1 t1 t1 t1 t1 ."
+      ".t1 t1 t1 t1 t1 ."
+      ".t2 t2 t2 t2 t2 ."
+      ".t2 t2 t2 t2 t2 ."
+      ".t3 t3 t3 t3 t3 ."
+      ".Id Id Id Id Id ."
+      ".Ig Ig Ig Ig Ig ."
+      ".Ib Ib Ib Ib Ib .";
+      
+  }
